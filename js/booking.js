@@ -13,7 +13,7 @@ document.getElementById("booking-form").addEventListener("submit", async (event)
     const field = document.getElementById("field").value;
 
     try {
-        const response = await fetch("http://localhost:8080/bookings", {
+        const response = await fetch("https://adv-server.onrender.com/bookings", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ date, time, field })
@@ -39,7 +39,7 @@ document.getElementById("booking-form").addEventListener("submit", async (event)
 
 // Получение бронирований с параметрами (сортировка, фильтрация, пагинация)
 async function fetchBookings(page = 1, sort = '', filter = '') {
-    const url = new URL("http://localhost:8080/bookings");
+    const url = new URL("https://adv-server.onrender.com/bookings");
     url.searchParams.append("page", page);
     if (sort) url.searchParams.append("sort", sort);
     if (filter) url.searchParams.append("filter", filter);
@@ -115,7 +115,7 @@ document.getElementById("update-booking").addEventListener("click", async () => 
 
     if (id && date && time && field) {
         try {
-            const response = await fetch("http://localhost:8080/bookings", {
+            const response = await fetch("https://adv-server.onrender.com/bookings", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ ID: parseInt(id), Date: date, Time: time, Field: field })
@@ -143,7 +143,7 @@ document.getElementById("delete-booking").addEventListener("click", async () => 
 
     if (id) {
         try {
-            const response = await fetch("http://localhost:8080/bookings", {
+            const response = await fetch("https://adv-server.onrender.com/bookings", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ ID: parseInt(id) })

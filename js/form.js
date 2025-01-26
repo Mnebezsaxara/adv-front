@@ -40,7 +40,7 @@ document.getElementById("login-form").addEventListener("submit", async (event) =
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://localhost:8080/auth", {
+        const response = await fetch("https://adv-server.onrender.com/auth", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),
@@ -80,7 +80,7 @@ async function verifyOTP(email) {
     const otp = document.getElementById("otp").value;
     
     try {
-        const response = await fetch("http://localhost:8080/verify-otp", {
+        const response = await fetch("https://adv-server.onrender.com/verify-otp", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, otp }),
@@ -108,7 +108,7 @@ document.getElementById("register-button").addEventListener("click", async () =>
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://localhost:8080/auth", {
+        const response = await fetch("https://adv-server.onrender.com/auth", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password }),

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newPassword = document.getElementById('new-password').value;
 
         try {
-            const response = await fetch('http://localhost:8080/auth', {
+            const response = await fetch('https://adv-server.onrender.com/auth', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

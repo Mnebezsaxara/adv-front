@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchUsers() {
     try {
-        const response = await fetch('http://localhost:8080/admin/users', {
+        const response = await fetch('https://adv-server.onrender.com/admin/users', {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
@@ -44,7 +44,7 @@ async function fetchUsers() {
 
 async function fetchBookings() {
     try {
-        const response = await fetch('http://localhost:8080/admin/bookings', {
+        const response = await fetch('https://adv-server.onrender.com/admin/bookings', {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
@@ -106,7 +106,7 @@ function displayBookings(bookings) {
 
 async function updateUserRole(userId, newRole) {
     try {
-        const response = await fetch(`http://localhost:8080/admin/users/${userId}/role`, {
+        const response = await fetch(`https://adv-server.onrender.com/admin/users/${userId}/role`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -132,7 +132,7 @@ async function deleteUser(userId) {
     }
 
     try {
-        const response = await fetch(`http://localhost:8080/admin/users/${userId}`, {
+        const response = await fetch(`https://adv-server.onrender.com/admin/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -156,7 +156,7 @@ async function deleteBooking(bookingId) {
     }
 
     try {
-        const response = await fetch(`http://localhost:8080/admin/bookings/${bookingId}`, {
+        const response = await fetch(`https://adv-server.onrender.com/admin/bookings/${bookingId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
