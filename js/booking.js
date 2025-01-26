@@ -48,7 +48,13 @@ async function fetchBookings(page = 1, sort = '', filter = '') {
     if (filter) url.searchParams.append("filter", filter);
 
     try {
-        const response = await fetch(url, { method: "GET" });
+        const response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}` // Добавление токена в заголовок
+            },
+        });
         const bookings = await response.json();
 
         console.log("Ответ сервера:", bookings); // Лог для проверки ответа сервера
