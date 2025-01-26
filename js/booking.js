@@ -48,6 +48,7 @@ async function fetchBookings(page = 1, sort = '', filter = '') {
     if (filter) url.searchParams.append("filter", filter);
 
     try {
+        const token = localStorage.getItem('token');
         const response = await fetch(url, {
             method: "GET",
             headers: {
