@@ -4,19 +4,23 @@ document.getElementById("bookings-list").style.display = "none";
 document.getElementById("pagination").style.display = "none";
 
 // Создание бронирования
-// Создание бронирования
 document.getElementById("booking-form").addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
     const field = document.getElementById("field").value;
+    localStorage.setItem('token', data.token);
+    const token = localStorage.getItem('token'); // Получение токена из localStorage
 
     try {
         const response = await fetch("https://adv-server.onrender.com/bookings", {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ date, time, field })
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}` // Передача токена
+            },
+            body: JSON.stringify({ date, time, field }),
         });
 
         const data = await response.json();
