@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul class="nav-left" id="navbar-links">
+                <li><a href="user-home.html">ГЛАВНАЯ</a></li>
+                <li><a href="user-field-beketbatyra.html">ПОЛЕ БЕКЕТ БАТЫРА</a></li>
+                <li><a href="user-field-orynbaeva.html">ПОЛЕ ОРЫНБАЕВА</a></li>
+                <li><a href="user-gym.html">ТРЕНАЖЕРНЫЙ ЗАЛ</a></li>
+            </ul>
+    
+            <div class="nav-center">
+                <a href="user-home.html">
+                    <img src="img/logo.webp" alt="SportLife Logo" class="navbar-logo">
+                </a>
+            </div>
+    
+            <div class="profile-button-container">
+                <a href="user-profile.html" class="profile-button">Мой профиль</a>
+            </div>
+    
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="text-center mb-4 modern-heading">User Profile</h3>
+                    
+                    <!-- Email Display -->
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <p id="user-email" class="form-control-static"></p>
+                    </div>
+
+                    <!-- Token Display -->
+                    <div class="mb-3">
+                        <label class="form-label">Token:</label>
+                        <p id="user-token" class="form-control-static" style="word-break: break-all;"></p>
+                    </div>
+
+                    <!-- Change Password Form -->
+                    <form id="password-form" class="mb-3">
+                        <div class="mb-3">
+                            <label for="new-password" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="new-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Change Password</button>
+                    </form>
+
+                    <!-- Logout Button -->
+                    <button id="logout-button" class="btn btn-danger w-100">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="js/user-profile.js"></script>
+</body>
+</html>
