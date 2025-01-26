@@ -1,0 +1,9 @@
+{
+    "root": "./",
+    "headers": {
+      "/**": {
+        "Cache-Control": "no-cache"
+      }
+    }
+  }
+  
