@@ -10,7 +10,6 @@ document.getElementById("booking-form").addEventListener("submit", async (event)
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
     const field = document.getElementById("field").value;
-    localStorage.setItem('token', data.token);
     const token = localStorage.getItem('token'); // Получение токена из localStorage
 
     try {
