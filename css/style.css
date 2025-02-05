@@ -1050,6 +1050,7 @@ section .row {
 }
 /* Booking styles */
 .booking-container {
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1058,7 +1059,10 @@ section .row {
     margin: 0 auto;
     height: 100vh;
 }
+
 .booking-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -1066,50 +1070,64 @@ section .row {
     display: flex;
     gap: 20px;
 }
-.booking-inner h2 {
+
+.form-wrapper {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
     font-size: 20px;
     padding: 10px 0;
-    color: #0a1f44;
     text-align: center;
 }
-.booking-inner input {
-    width: 100%;
-    padding: 15px;
-    margin: 18px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.booking-inner select {
-    width: 100%;
-    padding: 15px;
-    margin: 18px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.booking-inner button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #15830f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-.booking-inner button:hover {
-    background-color: #ffcc00;
-}
-.booking-inner #bookings-list {
+
+#bookings-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     margin-top: 20px;
     border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #0a1f44;
-    width: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
+}
+
+/* Table styles for booking section */
+.booking-table {
+    margin-bottom: 0;
+}
+
+.booking-table thead th {
+    background-color: #212529;
+    color: white;
+    border-color: #32383e;
+}
+
+.booking-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Controls for booking section */
+#controls {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: none;
+}
+
+/* Pagination for booking section */
+#pagination {
+    margin-top: 1rem;
+    display: none;
+}
+
+#pagination .btn {
+    min-width: 40px;
 }
 
 /* Profile Button Styling */
