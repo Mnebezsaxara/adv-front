@@ -124,6 +124,11 @@ h6,
     border: 1px solid white;
 }
 
+.overlay .btn:hover {
+    background-color: #ffaa00;
+    color: #000;
+}
+
 .container {
     max-width: 90%;
     margin: 0 auto;
@@ -1453,4 +1458,279 @@ section .row {
     .table td {
         font-size: 0.8rem;
     }
+}
+
+/* Add these styles after your existing CSS */
+.subscriptions {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.subscriptions h2 {
+    color: #0a1f44;
+}
+
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subscription-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.subscription-card:hover {
+    transform: translateY(-5px);
+}
+
+.subscription-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscription-card .price {
+    font-size: 36px !important;
+    color: #47a447 !important;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.subscription-card ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.subscription-card ul li {
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.subscription-card ul li:before {
+    content: "✓";
+    color: #47a447;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.subscribe-btn {
+    background: #47a447;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.subscribe-btn:hover {
+    background: #3d8b3d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured {
+    border: 2px solid #15830f;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #ffcc00;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.student-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.student-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.student-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333 !important; /* Force color override */
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.student-checkbox label span {
+    color: #333 !important; /* Ensure text is visible */
+}
+
+.student-checkbox i {
+    color: #47a447;
+    font-size: 18px;
+}
+
+/* Price summary styles */
+.price-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.price-summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.price-summary div span {
+    color: #333;
+}
+
+.price-summary .total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+
+.price-summary .total span {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.payment-btn {
+    background: #47a447;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-btn:hover {
+    background: #3d8b3d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Update student notice styles */
+.student-notice {
+    background: #2196f3;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.student-notice i {
+    font-size: 24px;
+}
+
+.student-notice p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
 }
